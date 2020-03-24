@@ -17,7 +17,9 @@ public class Application {
         double firstArgument = 5.25d;
         double secondArgument = 10.8d;
         double thirdArgument = 5.6d;
+
         var discriminant = context.getBean(Discriminant.class);
+
         discriminant.setAllArgument(firstArgument, secondArgument, thirdArgument);
         discriminant.checkOut();
     }

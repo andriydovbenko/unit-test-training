@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 public class Discriminant {
 
     private static final Logger logger = Logger.getLogger(Discriminant.class.getName());
+
     private double firsArgument;
     private double secondArgument;
     private double thirdArgument;
@@ -20,6 +21,7 @@ public class Discriminant {
     public void checkOut() {
         double discriminant = get();
         String formattedDiscriminant = transformDoubleToStringByDecimalFormat(discriminant);
+
         if (discriminant > 0) {
             logger.info("\nDiscriminant is " + formattedDiscriminant + " which is Positive\nHence Two Solutions");
         } else if (discriminant == 0) {
@@ -31,6 +33,7 @@ public class Discriminant {
 
     public String transformDoubleToStringByDecimalFormat(double discriminant) {
         DecimalFormat df = new DecimalFormat("#.##");
+
         return df.format(discriminant);
     }
 
